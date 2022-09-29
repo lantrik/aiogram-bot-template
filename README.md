@@ -5,4 +5,4 @@
 
 # Ссылки
 
-[![Telegram бот]()(https://t.me/imThereBot)
+[![Telegram бот](https://www.flaticon.com/free-icon/telegram_5968804?term=telegram&page=1&position=2&page=1&position=2&related_id=5968804)(https://t.me/imThereBot)
