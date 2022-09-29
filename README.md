@@ -5,4 +5,4 @@
 
 # Ссылки
 
-[![Telegram бот](https://img.shields.io/badge/blue.svg?style=flat-square&logo=telegram)](https://t.me/imThereBot)
+[![Telegram бот](https://img.shields.io/badge/style=flat-square&logo=telegram)](https://t.me/imThereBot)
