@@ -27,7 +27,7 @@ async def callback(message: Message) -> None:
 
 @router.message(Text(text="Конфликты", text_ignore_case=True))
 async def callback(message: Message) -> None:
-    message.answer("ок., reply_markup= ", reply_markup=ReplyKeyboardRemove())
+    await message.answer("ок., reply_markup= ", reply_markup=ReplyKeyboardRemove())
 
 @router.message(Text(text="Выгорание", text_ignore_case=True))
 async def callback(message: Message) -> None:
