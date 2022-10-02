@@ -1,16 +1,13 @@
-import logging
-
 from aiogram import (
-    Bot as AIObot,
+    Bot as AIOBot,
     Dispatcher
 )
 
+from src.config import Privacy
 from src.handlers import include_all_routers
 
-from src.config import Privacy
 
-
-class Bot(AIObot):
+class Bot(AIOBot):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(token=Privacy.token, *args, **kwargs)
 
