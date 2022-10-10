@@ -1,22 +1,21 @@
-import logging
-
 from asyncio import run
 
-from src.core import Bot
+from handlers import set_routers
+
+from src.config import Privacy
+from src.core import Bot, Logger
 
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(name)s - %(message)s"
-)
-
-bot = Bot()
+bot = Bot(Privacy.bot_token)
 
 def main() -> None:
-    bot.set_commands()
+    router = set_routers()
+
+    bot.include_router(router)
 
     run(bot.start())
 
 
 if __name__ == "__main__":
+    Logger().setup()
     main()

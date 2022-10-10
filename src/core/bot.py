@@ -1,25 +1,30 @@
+from logging import getLogger
+
+from typing import Any, Union, Optional
+
 from aiogram import (
-    Bot as AIOBot,
-    Dispatcher
+    Router,
+    Dispatcher,
+    Bot as AIOBot
 )
 
-from src.config import Privacy
-from src.handlers import include_all_routers
 
+log = getLogger()
 
 class Bot(AIOBot):
-    def __init__(self, *args, **kwargs) -> None:
-        super().__init__(token=Privacy.token, *args, **kwargs)
+    def __init__(self, token: str, **kwargs: Any) -> None:
+        super().__init__(token, **kwargs)
 
-        self.dispatcher = Dispatcher()
+        self.dp: Dispatcher = Dispatcher()
 
-    def set_commands(self) -> Dispatcher.include_router:
-        router = include_all_routers()
-
-        return self.dispatcher.include_router(router)
+    def include_router(self, router: Union[Router, str]) -> Dispatcher.include_router:
+        log.info("Подключение роутеров...")
         
+        return self.dp.include_router(router)
 
     async def start(self) -> Dispatcher.start_polling:
+        log.info("Подключение бота...")
+
         await self.delete_webhook(drop_pending_updates=True)
 
-        return await self.dispatcher.start_polling(self)
+        return await self.dp.start_polling(self)

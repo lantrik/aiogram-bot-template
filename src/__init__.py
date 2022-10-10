@@ -24,15 +24,25 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
+from typing import (
+    TYPE_CHECKING,
+    Literal,
+    NamedTuple
+)
+
+from .config import *
+
+if TYPE_CHECKING:
+    from src.core import Bot
+
 
 __name__ = "imThereBot"
 __author__ = "lantrik"
+
 __license__ = "MIT"
 __copyright__ = "Copyright (c) 2022 lantrik"
-__version__ = "0.1.0b0"
+__version__ = "0.1.1b0"
 
-
-from typing import Literal, NamedTuple
 
 class VersionInfo(NamedTuple):
     major: int
