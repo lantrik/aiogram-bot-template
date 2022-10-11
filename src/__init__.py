@@ -31,6 +31,7 @@ from typing import (
 )
 
 from .config import *
+from .privacy import *
 
 if TYPE_CHECKING:
     from src.core import Bot
@@ -41,7 +42,7 @@ __author__ = "lantrik"
 
 __license__ = "MIT"
 __copyright__ = "Copyright (c) 2022 lantrik"
-__version__ = "0.1.1b0"
+__version__ = "0.1.1b2"
 
 
 class VersionInfo(NamedTuple):
@@ -53,4 +54,4 @@ class VersionInfo(NamedTuple):
 
 
 version_info: VersionInfo = VersionInfo(
-    major=0, minor=1, micro=0, releaselevel="beta", serial=0)
+    major=0, minor=1, micro=2, releaselevel="beta", serial=0)
