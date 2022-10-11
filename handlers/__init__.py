@@ -8,7 +8,7 @@ from . import (
 
 
 routers: List[Router] = [
-    start.router
+    start.router,
 ]
 
 def set_routers() -> Router:

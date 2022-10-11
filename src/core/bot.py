@@ -1,12 +1,14 @@
 from logging import getLogger
 
-from typing import Any, Union, Optional
+from typing import Any, Union
 
 from aiogram import (
     Router,
     Dispatcher,
     Bot as AIOBot
 )
+
+from src import __version__
 
 
 log = getLogger()

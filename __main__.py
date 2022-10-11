@@ -2,7 +2,7 @@ from asyncio import run
 
 from handlers import set_routers
 
-from src.config import Privacy
+from src.privacy import Privacy
 from src.core import Bot, Logger
 
 

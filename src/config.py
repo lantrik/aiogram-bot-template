@@ -14,7 +14,3 @@ class Backend:
         1390707560 #lantrik
     ]
     debug: bool = False
-
-class Privacy:
-    """Класс с API-токенами."""
-    bot_token: str = "TOKEN"
