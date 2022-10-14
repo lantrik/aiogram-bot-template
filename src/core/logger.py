@@ -4,7 +4,7 @@ from src.config import Backend
 
 
 class Logger:
-    EXTERNAL_LOGS = ("aiogram", "http", )
+    EXTERNAL_LOGS = ("aiogram",  "dispatcher", "http", )
     LOG_LEVEL = logging.DEBUG if Backend.debug else logging.INFO
     LOG_FORMAT = ("{asctime} | {lineno:^3} | {filename:^16} | "
                   "{levelname:^8} | {message}")

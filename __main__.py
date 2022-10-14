@@ -6,7 +6,7 @@ from src.privacy import Privacy
 from src.core import Bot, Logger
 
 
-bot = Bot(Privacy.bot_token)
+bot = Bot()
 
 def main() -> None:
     router = set_routers()
@@ -17,5 +17,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    Logger().setup()
+    log = Logger()
+
+    log.setup()
     main()
