@@ -12,9 +12,9 @@ routers: List[Router] = [
 ]
 
 def set_routers() -> Router:
-    new_router: Router = Router()
+    combined_router: Router = Router()
 
     for router in routers:
-        new_router.include_router(router)
+        combined_router.include_router(router)
 
-    return new_router
+    return combined_router

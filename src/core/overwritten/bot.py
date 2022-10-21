@@ -18,7 +18,7 @@ class Bot(AIOBot):
         super().__init__(token, **kwargs)
 
         self.dp: Dispatcher = Dispatcher()
-
+    
     def include_router(self, router: Union[Router, str]) -> None:
         log.info("Подключение роутеров...")
         

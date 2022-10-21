@@ -1,4 +1,4 @@
-from .bot import Bot
+from .overwritten import Bot
 
 from .logger import Logger
 
