@@ -1,11 +1,15 @@
 import logging
 
-from src.config import Backend
+from aiobot.config import Backend
 
 
 class Logger:
-    EXTERNAL_LOGS = ("aiogram",  "dispatcher", "http", )
+    """
+    Логирование событий.
+    """
+    EXTERNAL_LOGS = ("aiogram", "dispatcher.py", "http", "client", "gateway", "base_events",)
     LOG_LEVEL = logging.DEBUG if Backend.debug else logging.INFO
+
     LOG_FORMAT = ("{asctime} | {lineno:^3} | {filename:^16} | "
                   "{levelname:^8} | {message}")
 

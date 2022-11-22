@@ -1,5 +1,5 @@
 """
-imThere telegram bot
+Telegram bot
 --------------------
 MIT License
 
@@ -34,15 +34,15 @@ from .config import *
 from .privacy import *
 
 if TYPE_CHECKING:
-    from src.core import Bot
+    from aiobot.core import Bot, Logger
 
 
-__name__ = "imThereBot"
+__name__ = "AIOBot"
 __author__ = "lantrik"
 
 __license__ = "MIT"
 __copyright__ = "Copyright (c) 2022 lantrik"
-__version__ = "0.1.4b6"
+__version__ = "0.2.0a0"
 
 
 class VersionInfo(NamedTuple):
@@ -54,4 +54,4 @@ class VersionInfo(NamedTuple):
 
 
 version_info: VersionInfo = VersionInfo(
-    major=0, minor=1, micro=4, releaselevel="beta", serial=6)
+    major=0, minor=2, micro=0, releaselevel="alpha", serial=0)
