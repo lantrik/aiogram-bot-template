@@ -45,7 +45,7 @@ class Bot(AIOBot):
                             handler = import_module(path)
 
                             self.dp.include_router(handler.router)
-                            log.info(f"{handler.__name__} установлен.")
+                            log.info(f"{handler.__name__} included.")
 
                         except Exception:
                             continue
@@ -57,7 +57,7 @@ class Bot(AIOBot):
                     handler = import_module(path)
 
                     self.dp.include_router(handler.router)
-                    log.info(f"{handler.__name__} установлен.")
+                    log.info(f"{handler.__name__} included.")
 
                 except Exception:
                     continue                  

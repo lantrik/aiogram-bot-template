@@ -14,11 +14,11 @@ async def on_startup() -> None:
     """
     Base startup event.
     """
-    log.info(f"Бот подключен | Версия: {__version__}")
+    log.info(f"Bot is ready! | Version: {__version__}")
 
 @router.shutdown()
 async def on_shutdown() -> None:
     """
     Base shutdown event.
     """
-    log.info(f"Бот отключен.")
+    log.info(f"Bot is shutdown.")
