@@ -66,7 +66,7 @@ class Bot(AIOBot):
         """
         Bot starting.
         """
-        log.info("Подключение бота...")
+        log.info("Connecting a bot...")
 
         self.include_routers(*args, **kwargs)
 
