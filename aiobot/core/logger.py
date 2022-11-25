@@ -1,14 +1,13 @@
+# SPDX-License-Identifier: MIT
+
 import logging
 
-from aiobot.config import Backend
+from config import Settings
 
 
 class Logger:
-    """
-    Логирование событий.
-    """
     EXTERNAL_LOGS = ("aiogram", "dispatcher.py", "http", "client", "gateway", "base_events",)
-    LOG_LEVEL = logging.DEBUG if Backend.debug else logging.INFO
+    LOG_LEVEL = logging.DEBUG if Settings.debug else logging.INFO
 
     LOG_FORMAT = ("{asctime} | {lineno:^3} | {filename:^16} | "
                   "{levelname:^8} | {message}")
@@ -17,7 +16,7 @@ class Logger:
         self.log = logging.getLogger()
 
     def _stream_handler(self) -> logging.StreamHandler:
-        """Возвращает основной регистратор для консоли."""
+        """Returns the main logger for the console."""
         formatter = logging.Formatter(self.LOG_FORMAT, style="{")
 
         handler = logging.StreamHandler()
@@ -26,7 +25,7 @@ class Logger:
         return handler
 
     def _file_handler(self) -> logging.FileHandler:
-        """Возвращает регистратор для файла."""
+        """Returns the logger for the file."""
         formatter = logging.Formatter(self.LOG_FORMAT, style="{")
 
         handler = logging.FileHandler("bot.log", encoding="utf8")
@@ -35,13 +34,13 @@ class Logger:
         return handler
     
     def _disable_logs(self) -> None:
-        """Отключает посторонние логгеры."""
-        level = logging.DEBUG if Backend.debug else logging.CRITICAL
+        """Disables extraneous loggers."""
+        level = logging.DEBUG if Settings.debug else logging.CRITICAL
         for log in self.EXTERNAL_LOGS:
             logging.getLogger(log).setLevel(level)
     
     def setup(self) -> None:
-        """Установка и настройка регистраторов."""
+        """Installing and configuring registrars."""
         self.log.setLevel(self.LOG_LEVEL)
         self._disable_logs()
         

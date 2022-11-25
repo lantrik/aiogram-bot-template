@@ -1,5 +1,4 @@
 from aiogram import Router
 
 
-router = Router()
-
+router = Router(name="Error handler")
