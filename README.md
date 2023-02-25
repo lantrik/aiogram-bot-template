@@ -1,5 +1,4 @@
-![Banner](https://user-images.githubusercontent.com/79407681/221333383-d5167801-b4e9-418a-b40e-638ec175e953.png)
-
+![Banner](https://user-images.githubusercontent.com/79407681/221333441-41052ac1-38a0-4ddb-a7b6-1e47f01af470.png)
 
 AIOGram Bot Template
 ====================
