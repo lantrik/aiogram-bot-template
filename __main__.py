@@ -1,6 +1,6 @@
 from asyncio import run
 
-from aiobot.core import Bot, Logger
+from bot.core import Bot, Logger
 
 
 if __name__ == "__main__":

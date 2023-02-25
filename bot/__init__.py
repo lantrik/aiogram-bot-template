@@ -1,6 +1,6 @@
 """
-Telegram bot
---------------------
+Telegram bot template
+-----------
 MIT License
 
 Copyright (c) 2022 LantriK
@@ -39,7 +39,7 @@ __author__ = "lantrik"
 
 __license__ = "MIT"
 __copyright__ = "Copyright (c) 2022 lantrik"
-__version__ = "0.2.1b0"
+__version__ = "1.0.0c0"
 
 
 class VersionInfo(NamedTuple):
@@ -51,4 +51,4 @@ class VersionInfo(NamedTuple):
 
 
 version_info: VersionInfo = VersionInfo(
-    major=0, minor=2, micro=1, releaselevel="alpha", serial=0)
+    major=1, minor=0, micro=0, releaselevel="candidate", serial=0)
